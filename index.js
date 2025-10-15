@@ -3,6 +3,8 @@ initGame();
 function initGame() {
     console.log("Game Initialized");
     turn=0;
+    document.querySelector('[game-status]').style.color = '';
+    document.querySelector('[game-status]').style.backgroundColor = '';
     document.querySelector('[game-status]').textContent = "Current Turn: X";
     const boxes = document.querySelectorAll('[data-box]');
     boxes.forEach(box => {
@@ -26,6 +28,7 @@ function handleBoxClick(event) {
     }
     if(turn === 9){
         document.querySelector('[game-status]').textContent = "Game Drawn!";
+        document.querySelector('[game-status]').style.cssText = 'color:yellow;background-color:black';
         document.querySelector('#btn').classList.remove('hidden');
         return;
     }
@@ -56,6 +59,7 @@ function checkGameStatus(player) {
             boxes[b].style.backgroundColor = 'green';
             boxes[c].style.backgroundColor = 'green';
             document.querySelector('[game-status]').textContent = `Player ${player} Wins!`;
+            document.querySelector('[game-status]').style.cssText = 'color:green;background-color:black';
             document.querySelector('#btn').classList.remove('hidden');
             return true;
         }       
