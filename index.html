@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="./public/styles.css">
+</head>
+<body class="box-border m-0 p-0">
+    <div id="wrapper" class="w-screen h-screen p-4 flex flex-col items-center gap-12 bg-black/60 text-black/80">
+        <div>
+            <h1 class="text-3xl font-bold text-center">Tic-Tac-Toe</h1>
+            <h2 game-status class="font-semibold mt-2 bg-[rgba(255,255,255,0.15)] px-8 py-2 rounded-xl"></h2>
+        </div>
+        <div  game-board class="w-10/12 max-w-[20rem] mx-auto aspect-square grid grid-cols-3 bg-[rgba(255,255,255,0.15)] p-4 rounded-xl">
+            <div data-box class="relative w-[100%] aspect-square cursor-pointer text-[3rem] flex items-center justify-center border-r-1 border-b-1"></div>
+            <div data-box class="relative w-[100%] aspect-square cursor-pointer text-[3rem] flex items-center justify-center border-r-1 border-b-1"></div>
+            <div data-box class="relative w-[100%] aspect-square cursor-pointer text-[3rem] flex items-center justify-center  border-b-1"></div>
+            <div data-box class="relative w-[100%] aspect-square cursor-pointer text-[3rem] flex items-center justify-center border-r-1 border-b-1"></div>
+            <div data-box class="relative w-[100%] aspect-square cursor-pointer text-[3rem] flex items-center justify-center border-r-1 border-b-1"></div>
+            <div data-box class="relative w-[100%] aspect-square cursor-pointer text-[3rem] flex items-center justify-center border-b-1"></div>
+            <div data-box class="relative w-[100%] aspect-square cursor-pointer text-[3rem] flex items-center justify-center border-r-1"></div>
+            <div data-box class="relative w-[100%] aspect-square cursor-pointer text-[3rem] flex items-center justify-center border-r-1"></div>
+            <div data-box class="relative w-[100%] aspect-square cursor-pointer text-[3rem] flex items-center justify-center"></div>
+        </div>
+        <button onclick="initGame()" id="btn" class="font-bold bg-[rgba(255,255,255,0.15)] px-8 py-2 rounded-xl hidden">Restart Game</button>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
